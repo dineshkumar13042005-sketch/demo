@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baketeria - Freshly Baked, Beautifully Crafted Artisan Cakes, Signature Jackfruit Cake, Custom Birthday & Wedding Cakes, and Decadent Brownies.">
+    <title>Baketeria | Freshly Baked. Beautifully Crafted.</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-cake-candles"></i></span>
+                <div class="logo-text">
+                    <span class="brand-name">Baketeria</span>
+                    <span class="brand-sub">AYANAVARAM, CHENNAI</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#popular" class="nav-link">Popular</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#menu" class="nav-link">Cakes & Menu</a>
+                <a href="#location" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="tel:09344273174" class="btn btn-secondary btn-sm nav-call-btn" title="Call Baketeria">
+                    <i class="fa-solid fa-phone"></i> <span>093442 73174</span>
+                </a>
+                <button class="cart-btn" id="cartBtn" onclick="openCartModal()" aria-label="Order Basket">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="btn btn-primary nav-cta-btn" onclick="openOrderModal()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Order Now
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-background-shape"></div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge-pill">
+                    <span class="sparkle-icon">⭐</span> 5.0 Rating (46 Google Reviews) • Ayanavaram, Chennai
+                </div>
+                <h1 class="hero-title">
+                    Baketeria<br>
+                    <span class="text-highlight">Fresh & Custom Cake Shop</span>
+                </h1>
+                <p class="hero-description">
+                    Handcrafted celebration cakes, signature tropical Jackfruit cakes, custom theme birthday designs, and gooey chocolate brownies baked daily in Ayanavaram, Chennai. Takeaway & Doorstep Delivery available until 9 PM.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" onclick="openOrderModal()">
+                        <i class="fa-solid fa-bag-shopping"></i> Order Now
+                    </button>
+                    <a href="tel:09344273174" class="btn btn-secondary btn-lg">
+                        <i class="fa-solid fa-phone"></i> Call 093442 73174
+                    </a>
+                </div>
+
+                <!-- Google Rating Badge -->
+                <div class="rating-badge">
+                    <div class="google-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                    </div>
+                    <div class="rating-info">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="rating-score">5.0 / 5</span>
+                        </div>
+                        <p class="rating-count">Based on <strong>46 Google reviews</strong> • Open until 9 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="image-frame">
+                    <img src="assets/images/hero-cake.jpg" alt="Baketeria Freshly Baked Celebration Cake" class="hero-img">
+                    <div class="hero-floating-card top-left">
+                        <i class="fa-solid fa-truck-fast icon-gold"></i>
+                        <div>
+                            <strong>Takeaway & Delivery</strong>
+                            <span>Ayanavaram, Chennai 600023</span>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card bottom-right">
+                        <i class="fa-solid fa-heart icon-rose"></i>
+                        <div>
+                            <strong>Fresh & Moist Cakes</strong>
+                            <span>Attractive & Affordable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Baketeria -->
+    <section class="section why-us-section" id="why-us">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">OUR COMMITMENT TO QUALITY</span>
+                <h2 class="section-title">Why Choose Baketeria</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="grid grid-4 why-us-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                    </div>
+                    <h3>Homemade Taste</h3>
+                    <p>Authentic family recipes baked in small batches with genuine warmth, rich flavors, and homemade comfort.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We source real cream butter, pure Belgian chocolate, fresh seasonal fruits, and organic vanilla extract.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Beautiful Designs</h3>
+                    <p>Each cake is a canvas. Elegant sugar craft, delicate drip finishes, custom toppers, and vivid themes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium luxury design and melt-in-your-mouth taste priced transparently for every celebration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Cakes Spotlight -->
+    <section class="section popular-section" id="popular">
+        <div class="container">
+            <div class="section-header flex-between">
+                <div>
+                    <span class="section-subtitle">CUSTOMER FAVORITES</span>
+                    <h2 class="section-title">Popular Cakes</h2>
+                </div>
+                <a href="#menu" class="link-btn">Explore Full Menu <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid grid-4 popular-grid">
+                <!-- Signature Jackfruit Cake -->
+                <div class="product-card featured-card">
+                    <div class="card-badge signature-badge">★ House Signature</div>
+                    <div class="card-image">
+                        <img src="assets/images/jackfruit-cake.jpg" alt="Baketeria Signature Jackfruit Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Specialty</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Jackfruit Cake</h3>
+                        <p>Our viral specialty! Layers of soft vanilla sponge infused with fresh sweet jackfruit pulp and toasted coconut.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Jackfruit Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Jackfruit Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chocolate Cake -->
+                <div class="product-card">
+                    <div class="card-badge">Popular</div>
+                    <div class="card-image">
+                        <img src="assets/images/chocolate-cake.jpg" alt="Rich Dark Chocolate Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Chocolate</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <h3>Chocolate Cake</h3>
+                        <p>Deep dark chocolate sponges layered with velvety Belgian chocolate ganache and chocolate curls.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Chocolate Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Chocolate Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Birthday Cake -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="assets/images/hero-cake.jpg" alt="Classic Celebration Birthday Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Celebration</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Birthday Cake</h3>
+                        <p>Vibrant celebratory cake with moist vanilla layers, buttercream piping, and custom birthday greetings.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Birthday Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Birthday Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brownie Tub -->
+                <div class="product-card">
+                    <div class="card-badge bestseller-badge">Bestseller</div>
+                    <div class="card-image">
+                        <img src="assets/images/brownie-tub.jpg" alt="Fudgy Chocolate Brownie Tub">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Brownies</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Brownie Tub</h3>
+                        <p>Decadent fudgy chocolate brownie bites drowned in warm chocolate fudge sauce and choco chips.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Brownie Tub')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Brownie Tub')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container about-grid">
+            <div class="about-visuals">
+                <div class="about-image-stack">
+                    <img src="assets/images/hero-cake.jpg" alt="Artisan Bakery Kitchen" class="about-img-main">
+                    <div class="about-experience-card">
+                        <span class="exp-number">100%</span>
+                        <span class="exp-text">Freshly Baked Every Morning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="section-subtitle">👩‍🍳 ABOUT BAKETERIA</span>
+                <h2 class="section-title">Our Story & Passion for Baking</h2>
+                <div class="title-underline left"></div>
+
+                <p class="about-lead">
+                    Baketeria started with a simple belief: every sweet moment deserves a cake that tastes like pure home and looks like a work of art.
+                </p>
+                <p class="about-text">
+                    What began as passion baking in a home kitchen has grown into a beloved neighborhood bakery. Our bakers carefully select every egg, block of butter, and fresh fruit slice to ensure an unforgettable moist texture and heavenly aroma.
+                </p>
+
+                <div class="about-highlights-grid">
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Fresh Ingredients</strong>
+                            <p>No premixes or artificial flavor powders.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Custom Cake Designs</strong>
+                            <p>Photo, theme, and wedding cake artistry.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Homemade Taste</strong>
+                            <p>Rich, moist texture with balanced sweetness.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Affordable Pricing</strong>
+                            <p>Fair rates with zero hidden customization fees.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item full-width">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        <div>
+                            <strong>Delivery & Takeaway Available</strong>
+                            <p>Doorstep delivery with temperature-controlled packaging or easy store pickup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cakes / Menu Page Section -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">EXPLORE OUR DELICIOUS SELECTION</span>
+                <h2 class="section-title">Cakes & Menu</h2>
+                <p class="section-desc">Browse by categories or customize your dream cake for any occasion.</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="category-tabs" id="categoryTabs">
+                <button class="tab-btn active" data-category="all">
+                    <i class="fa-solid fa-layer-group"></i> All Items
+                </button>
+                <button class="tab-btn" data-category="birthday">
+                    <i class="fa-solid fa-cake-candles"></i> Birthday Cakes
+                </button>
+                <button class="tab-btn" data-category="special">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Special Cakes
+                </button>
+                <button class="tab-btn" data-category="brownies">
+                    <i class="fa-solid fa-cookie-bite"></i> Brownies
+                </button>
+                <button class="tab-btn" data-category="custom">
+                    <i class="fa-solid fa-ribbon"></i> Custom Cakes
+                </button>
+            </div>
+
+            <!-- Menu Product Cards Grid -->
+            <div class="grid grid-3 menu-grid" id="menuGrid">
+                <!-- Birthday Cakes -->
+                <div class="product-card menu-card" data-category="birthday">
+                    <div class="card-image">
+                        <img src="assets/images/chocolate-cake.jpg" alt="Chocolate Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Birthday Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <h3>Chocolate Cake</h3>
+                        <p>Moist chocolate sponge layers filled with silky fudge frosting and dark chocolate flakes.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Chocolate Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Chocolate Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="birthday">
+                    <div class="card-image">
+                        <img src="assets/images/vanilla-cake.jpg" alt="Vanilla Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Birthday Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <h3>Vanilla Cake</h3>
+                        <p>Classic fluffy Madagascar vanilla sponge layered with light whip cream and berry preserve.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Vanilla Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Vanilla Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="birthday">
+                    <div class="card-image">
+                        <img src="assets/images/butterscotch-cake.jpg" alt="Butterscotch Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Birthday Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <h3>Butterscotch Cake</h3>
+                        <p>Rich butterscotch sponge coated with golden caramel drizzle and crunchy praline nuts.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Butterscotch Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Butterscotch Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="birthday">
+                    <div class="card-image">
+                        <img src="assets/images/black-forest-cake.jpg" alt="Black Forest Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Birthday Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Black Forest Cake</h3>
+                        <p>Traditional German chocolate cake infused with dark cherries, whipped cream, and shaved chocolate.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Black Forest Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Black Forest Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="birthday">
+                    <div class="card-image">
+                        <img src="assets/images/red-velvet-cake.jpg" alt="Red Velvet Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Birthday Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Red Velvet Cake</h3>
+                        <p>Velvety cocoa crimson cake layered with signature smooth cream cheese frosting.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Red Velvet Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Red Velvet Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Cakes -->
+                <div class="product-card menu-card" data-category="special">
+                    <div class="card-badge signature-badge">★ Signature</div>
+                    <div class="card-image">
+                        <img src="assets/images/jackfruit-cake.jpg" alt="Jackfruit Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Special Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Jackfruit Cake</h3>
+                        <p>Exclusive tropical formulation made with authentic fresh jackfruit fruit pulp & coconut flakes.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Jackfruit Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Jackfruit Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="special">
+                    <div class="card-image">
+                        <img src="assets/images/custom-theme-cake.jpg" alt="Custom Theme Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Special Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Custom Theme Cake</h3>
+                        <p>3D fondant sculptures, cartoon characters, superhero themes, or floral aesthetic themes.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Custom Theme Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Custom Theme Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="special">
+                    <div class="card-image">
+                        <img src="assets/images/photo-cake.jpg" alt="Photo Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Special Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <h3>Photo Cake</h3>
+                        <p>High-resolution edible photo printing on top of your favorite cake flavor sponge.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Photo Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Photo Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="special">
+                    <div class="card-image">
+                        <img src="assets/images/designer-cake.jpg" alt="Designer Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Special Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Designer Cake</h3>
+                        <p>Luxury metallic gold foil accents, geometric stencil patterns, and handcrafted sugar flowers.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Designer Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Designer Cake')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brownies -->
+                <div class="product-card menu-card" data-category="brownies">
+                    <div class="card-image">
+                        <img src="assets/images/chocolate-brownie.jpg" alt="Chocolate Brownie">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Brownies</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <h3>Chocolate Brownie</h3>
+                        <p>Classic square sliced dark chocolate brownies with crinkly top crust and gooey center.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Chocolate Brownie')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Chocolate Brownie')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="brownies">
+                    <div class="card-badge bestseller-badge">Bestseller</div>
+                    <div class="card-image">
+                        <img src="assets/images/brownie-tub.jpg" alt="Brownie Tub">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Brownies</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Brownie Tub</h3>
+                        <p>Bite-sized fudge brownie cubes packed in a clear tub with chocolate chunks & sea salt.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Brownie Tub')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Brownie Tub')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="brownies">
+                    <div class="card-image">
+                        <img src="assets/images/5.jpg" alt="Chocolate Sauce Brownie">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Brownies</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Chocolate Sauce Brownie</h3>
+                        <p>Warm microwaveable brownie served with a separate jar of hot chocolate fudge dip sauce.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Chocolate Sauce Brownie')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Chocolate Sauce Brownie')">
+                                <i class="fa-solid fa-sliders"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Cakes Categories -->
+                <div class="product-card menu-card" data-category="custom">
+                    <div class="card-image">
+                        <img src="assets/images/1.jpg" alt="Birthday Custom Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Custom Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Birthday Custom Cake</h3>
+                        <p>Tailored birthday cake designed specifically for milestone 1st, 18th, 21st, 50th birthdays.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Birthday Custom Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Birthday Custom Cake')">
+                                <i class="fa-solid fa-sliders"></i> Customize
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="custom">
+                    <div class="card-image">
+                        <img src="assets/images/3.jpg" alt="Anniversary Custom Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Custom Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Anniversary Cake</h3>
+                        <p>Romantic heart shapes, elegant rose piping, pearl sprinkles, and silver anniversary detailing.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Anniversary Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Anniversary Cake')">
+                                <i class="fa-solid fa-sliders"></i> Customize
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="custom">
+                    <div class="card-image">
+                        <img src="assets/images/2.jpg" alt="Baby Shower Custom Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Custom Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Baby Shower Cake</h3>
+                        <p>Adorable pastel color themes, cute fondant boots, teddy bears, and gender reveal surprise centers.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Baby Shower Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Baby Shower Cake')">
+                                <i class="fa-solid fa-sliders"></i> Customize
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="custom">
+                    <div class="card-image">
+                        <img src="assets/images/6.jpg" alt="Wedding Custom Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Custom Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Wedding Tier Cake</h3>
+                        <p>Grand multi-tier wedding masterpieces with real floral arrangements and gold leaf accents.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Wedding Tier Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Wedding Tier Cake')">
+                                <i class="fa-solid fa-sliders"></i> Customize
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card menu-card" data-category="custom">
+                    <div class="card-image">
+                        <img src="assets/images/4.jpg" alt="Corporate Events Custom Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag">Custom Cake</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <h3>Corporate Event Cake</h3>
+                        <p>Company branding cakes, logo toppers, product launch cakes, and large office party sheet cakes.</p>
+                        <div class="card-footer card-actions-flex">
+                            <button class="btn btn-sm btn-outline btn-cart" onclick="addToCart('Corporate Event Cake')">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-sm btn-primary btn-order" onclick="openOrderModal('Corporate Event Cake')">
+                                <i class="fa-solid fa-sliders"></i> Customize
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Off-Menu Extra Item Card -->
+                <div class="product-card menu-card custom-order-card" data-category="custom special brownies birthday">
+                    <div class="card-badge off-menu-badge">✨ Special Order</div>
+                    <div class="card-image custom-order-image">
+                        <div class="custom-card-icon-box">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <img src="assets/images/hero-cake.jpg" alt="Order Custom Off-Menu Item">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="tag special-tag">Off-Menu Request</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> Custom</span>
+                        </div>
+                        <h3>Order Custom / Extra Item</h3>
+                        <p>Have a unique design idea, custom flavor, tea cakes, hampers, or item not listed in our menu? Request it here!</p>
+                        <div class="card-footer">
+                            <button class="btn btn-sm btn-primary btn-block custom-request-btn" onclick="openOrderModal('Custom / Off-Menu Request')">
+                                <i class="fa-solid fa-pen-to-square"></i> Order Custom Item
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">LOVE FROM OUR CUSTOMERS</span>
+                <h2 class="section-title">Customer Feedback</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="grid grid-3 reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "The <strong>Jackfruit Cake</strong> from Baketeria is out of this world! It was so fresh, ultra moist, and not overly sweet. Everyone at our family gathering was blown away!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">AP</div>
+                        <div>
+                            <strong>Ananya Patel</strong>
+                            <span>Google Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Ordered a custom theme birthday cake for my daughter. The design was exceptionally beautiful, exactly as promised. The chocolate sponge was so soft and fresh!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">RM</div>
+                        <div>
+                            <strong>Rahul & Meera</strong>
+                            <span>Google Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Hands down the best Brownie Tubs in town. Rich dark chocolate fudge taste at very affordable pricing. Fast delivery too!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">SK</div>
+                        <div>
+                            <strong>Siddharth K.</strong>
+                            <span>Google Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action (CTA) Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <div class="cta-box">
+                <span class="cta-badge">🎉 Special Occasions in Ayanavaram, Chennai</span>
+                <h2 class="cta-title">“Have a celebration coming up?”</h2>
+                <p class="cta-subtitle">Let us craft a memorable, freshly baked custom cake tailored specifically to your dream design and favorite flavor.</p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-xl cta-btn" onclick="openOrderModal()">
+                        <i class="fa-solid fa-cake-candles"></i> Order Your Cake
+                    </button>
+                    <a href="tel:09344273174" class="btn btn-secondary btn-xl cta-btn">
+                        <i class="fa-solid fa-phone"></i> Call 093442 73174
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Location & Hours Section -->
+    <section class="section location-section" id="location">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">VISIT OUR BAKERY OR ORDER ONLINE</span>
+                <h2 class="section-title">Baketeria Artisan Bakery</h2>
+                <p class="section-desc">Ayanavaram's Favorite Fresh & Moist Artisan Cake Shop in Chennai</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="grid grid-3 location-grid">
+                <div class="location-card">
+                    <div class="loc-icon-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Bakery Location</h3>
+                    <p><strong>Ayanavaram, Chennai</strong><br>Tamil Nadu – 600023</p>
+                    <span class="loc-tag">📍 Central Ayanavaram Hub</span>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Baketeria+Ayanavaram+Chennai+Tamil+Nadu+600023" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary btn-block mt-2">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                    </a>
+                </div>
+
+                <div class="location-card">
+                    <div class="loc-icon-box">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3>Operating Hours</h3>
+                    <p><strong>Monday – Sunday</strong><br>9:00 AM – 9:00 PM</p>
+                    <span class="loc-tag highlight-tag">🟢 Open Today until 9 PM</span>
+                </div>
+
+                <div class="location-card">
+                    <div class="loc-icon-box">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3>Order & Delivery</h3>
+                    <p><strong>Phone:</strong> 093442 73174<br><strong>Services:</strong> Takeaway & Home Delivery</p>
+                    <a href="tel:09344273174" class="btn btn-sm btn-primary btn-block mt-2">
+                        <i class="fa-solid fa-phone"></i> Call 093442 73174
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#home" class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-cake-candles"></i></span>
+                    <div class="logo-text">
+                        <span class="brand-name">Baketeria</span>
+                        <span class="brand-sub">AYANAVARAM, CHENNAI</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Fresh & moist artisan cakes, signature jackfruit specials, custom theme birthday designs, and fudgy brownies made with love in Ayanavaram, Chennai.
+                </p>
+                <div class="social-links">
+                    <a href="https://wa.me/919344273174" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="tel:09344273174" aria-label="Phone Call"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#location" aria-label="Location"><i class="fa-solid fa-location-dot"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="#about">About Baketeria</a></li>
+                    <li><a href="#menu">Cakes & Menu</a></li>
+                    <li><a href="#location">Store Location</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Popular Items</h4>
+                <ul class="footer-links">
+                    <li><a href="#menu">Signature Jackfruit Cake</a></li>
+                    <li><a href="#menu">Custom Birthday Cakes</a></li>
+                    <li><a href="#menu">Anniversary Custom Cakes</a></li>
+                    <li><a href="#menu">Fudgy Brownie Tubs</a></li>
+                    <li><a href="#menu">Wedding Tier Cakes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Bakery Info</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Ayanavaram, Chennai – 600023</li>
+                    <li><i class="fa-solid fa-clock"></i> Mon - Sun: 9:00 AM - 9:00 PM (Open Until 9 PM)</li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="tel:09344273174" style="color:inherit;">093442 73174</a></li>
+                    <li><i class="fa-solid fa-truck-fast"></i> Services: Takeaway + Delivery</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Baketeria. Ayanavaram, Chennai – 600023. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Order / Customize Cake Modal -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeOrderModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span class="modal-subtitle">🍰 BAKETERIA ORDER & CUSTOMIZER</span>
+                <h3 id="modalCakeTitle">Order Your Cake</h3>
+            </div>
+            <form id="orderForm" onsubmit="handleOrderSubmit(event)">
+                <div class="form-group">
+                    <label for="cakeSelect">Select Cake / Dessert</label>
+                    <select id="cakeSelect" required>
+                        <option value="Jackfruit Cake">Jackfruit Cake (House Signature)</option>
+                        <option value="Chocolate Cake">Chocolate Cake</option>
+                        <option value="Birthday Cake">Classic Birthday Cake</option>
+                        <option value="Vanilla Cake">Vanilla Cake</option>
+                        <option value="Butterscotch Cake">Butterscotch Cake</option>
+                        <option value="Black Forest Cake">Black Forest Cake</option>
+                        <option value="Red Velvet Cake">Red Velvet Cake</option>
+                        <option value="Custom Theme Cake">Custom Theme Cake</option>
+                        <option value="Photo Cake">Edible Photo Cake</option>
+                        <option value="Designer Cake">Designer Cake</option>
+                        <option value="Brownie Tub">Fudgy Brownie Tub</option>
+                        <option value="Chocolate Brownie">Chocolate Brownie Pack</option>
+                        <option value="Birthday Custom Cake">Custom Birthday Cake</option>
+                        <option value="Anniversary Cake">Custom Anniversary Cake</option>
+                        <option value="Baby Shower Cake">Baby Shower Cake</option>
+                        <option value="Wedding Tier Cake">Wedding Tier Cake</option>
+                        <option value="Corporate Event Cake">Corporate Event Cake</option>
+                        <option value="Custom / Off-Menu Request">✨ Custom / Off-Menu Extra Item Request</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cakeSize">Weight / Size</label>
+                        <select id="cakeSize">
+                            <option value="0.5kg">0.5 kg (Small)</option>
+                            <option value="1kg" selected>1 kg (Standard)</option>
+                            <option value="2kg">2 kg (Large)</option>
+                            <option value="3kg">3 kg (Party)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eggPreference">Egg / Eggless</label>
+                        <select id="eggPreference">
+                            <option value="Eggless (100% Veg)">100% Veg (Eggless)</option>
+                            <option value="With Egg">With Egg</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="customMessage">Message on Cake (Optional)</label>
+                    <input type="text" id="customMessage" placeholder="e.g. Happy Birthday Sarah! 🎂">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="orderDate">Delivery / Pickup Date</label>
+                        <input type="date" id="orderDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Phone / WhatsApp</label>
+                        <input type="tel" id="customerPhone" placeholder="+91 93442 73174" required>
+                    </div>
+                </div>
+
+                <!-- Delivery Option Section -->
+                <div class="form-group">
+                    <label class="form-section-label">Delivery Option</label>
+                    <div class="delivery-options-grid">
+                        <label class="delivery-radio-option active" id="radioCardDoorstep">
+                            <input type="radio" name="deliveryOption" id="deliveryDoorstep" value="Doorstep Delivery" checked onchange="handleDeliveryOptionChange('doorstep')">
+                            <span class="custom-radio-circle"></span>
+                            <div class="delivery-option-info">
+                                <span class="option-title"><i class="fa-solid fa-truck-fast"></i> Doorstep Delivery</span>
+                                <small class="option-desc">Freshly delivered to your home</small>
+                            </div>
+                        </label>
+                        <label class="delivery-radio-option" id="radioCardTakeaway">
+                            <input type="radio" name="deliveryOption" id="deliveryTakeaway" value="Takeaway" onchange="handleDeliveryOptionChange('takeaway')">
+                            <span class="custom-radio-circle"></span>
+                            <div class="delivery-option-info">
+                                <span class="option-title"><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                                <small class="option-desc">Pick up at Ayanavaram store</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Delivery Address Field (Shown when Doorstep Delivery is selected) -->
+                <div class="form-group" id="deliveryAddressWrapper">
+                    <label for="deliveryAddress">Delivery Address</label>
+                    <textarea id="deliveryAddress" rows="3" placeholder="[ Enter your full address ]" required></textarea>
+                </div>
+
+                <!-- Store Pickup Notice (Shown when Takeaway is selected) -->
+                <div class="takeaway-store-box" id="takeawayStoreBox" style="display: none;">
+                    <div class="store-box-content">
+                        <i class="fa-solid fa-store store-icon"></i>
+                        <div class="store-box-details">
+                            <strong class="store-title">Baketeria Store Pickup</strong>
+                            <p class="store-address">Ayanavaram, Chennai – 600023</p>
+                            <span class="store-hours-badge">🟢 Open today until 9:00 PM • Zero Delivery Fee</span>
+                            <div class="mt-2">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Baketeria+Ayanavaram+Chennai+Tamil+Nadu+600023" target="_blank" rel="noopener noreferrer" class="btn-map-direction">
+                                    <i class="fa-solid fa-diamond-turn-right"></i> Get Directions on Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialInstructions">Custom Design Request / Notes (Optional)</label>
+                    <textarea id="specialInstructions" rows="2" placeholder="Mention theme colors, eggless requests, or specific preferences..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-whatsapp btn-block btn-lg">
+                    <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Interactive Shopping Basket Modal -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-card cart-modal-card">
+            <button class="modal-close" onclick="closeCartModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span class="modal-subtitle">🛒 YOUR BAKETERIA BASKET</span>
+                <h3>Shopping Cart</h3>
+            </div>
+            <div id="cartItemsList" class="cart-items-list">
+                <!-- Populated dynamically by app.js -->
+            </div>
+            <div class="cart-modal-footer" id="cartModalFooter">
+                <div class="cart-total-row">
+                    <span>Total Selected Items: <strong id="cartTotalItems">0</strong></span>
+                </div>
+
+                <!-- Cart Delivery Option Section -->
+                <div class="form-group cart-delivery-group">
+                    <label class="form-section-label">Delivery Option</label>
+                    <div class="delivery-options-grid">
+                        <label class="delivery-radio-option active" id="cartRadioCardDoorstep">
+                            <input type="radio" name="cartDeliveryOption" id="cartDeliveryDoorstep" value="Doorstep Delivery" checked onchange="handleCartDeliveryOptionChange('doorstep')">
+                            <span class="custom-radio-circle"></span>
+                            <div class="delivery-option-info">
+                                <span class="option-title"><i class="fa-solid fa-truck-fast"></i> Doorstep Delivery</span>
+                            </div>
+                        </label>
+                        <label class="delivery-radio-option" id="cartRadioCardTakeaway">
+                            <input type="radio" name="cartDeliveryOption" id="cartDeliveryTakeaway" value="Takeaway" onchange="handleCartDeliveryOptionChange('takeaway')">
+                            <span class="custom-radio-circle"></span>
+                            <div class="delivery-option-info">
+                                <span class="option-title"><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" id="cartDeliveryAddressWrapper">
+                    <label for="cartDeliveryAddress">Delivery Address</label>
+                    <textarea id="cartDeliveryAddress" rows="2" placeholder="[ Enter your full address ]"></textarea>
+                </div>
+
+                <div class="takeaway-store-box" id="cartTakeawayStoreBox" style="display: none; margin-bottom: 15px;">
+                    <div class="store-box-content">
+                        <i class="fa-solid fa-store store-icon"></i>
+                        <div class="store-box-details">
+                            <strong class="store-title">Baketeria Store Pickup</strong>
+                            <p class="store-address">Ayanavaram, Chennai – 600023</p>
+                            <div class="mt-2">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Baketeria+Ayanavaram+Chennai+Tamil+Nadu+600023" target="_blank" rel="noopener noreferrer" class="btn-map-direction">
+                                    <i class="fa-solid fa-diamond-turn-right"></i> Get Directions on Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-action-buttons">
+                    <button class="btn btn-secondary" onclick="closeCartModal()">Keep Browsing</button>
+                    <button class="btn btn-whatsapp flex-1" onclick="checkoutCartWhatsApp()">
+                        <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
