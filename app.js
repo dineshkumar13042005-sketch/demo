@@ -135,24 +135,24 @@ function closeOrderModal() {
 
 // Product Catalog Data with Prices & Image Paths
 const cakeCatalogData = {
-    'jackfruit cake': { price: '₹650 / 1kg', priceNum: 650, img: 'assets/images/jackfruit-cake.jpg', label: 'Signature Jackfruit Cake' },
-    'chocolate cake': { price: '₹550 / 1kg', priceNum: 550, img: 'assets/images/chocolate-cake.jpg', label: 'Rich Chocolate Cake' },
-    'birthday cake': { price: '₹500 / 1kg', priceNum: 500, img: 'assets/images/hero-cake.jpg', label: 'Classic Birthday Cake' },
-    'vanilla cake': { price: '₹450 / 1kg', priceNum: 450, img: 'assets/images/vanilla-cake.jpg', label: 'Vanilla Sponge Cake' },
-    'butterscotch cake': { price: '₹500 / 1kg', priceNum: 500, img: 'assets/images/butterscotch-cake.jpg', label: 'Butterscotch Praline Cake' },
-    'black forest cake': { price: '₹550 / 1kg', priceNum: 550, img: 'assets/images/black-forest-cake.jpg', label: 'Black Forest Cake' },
-    'red velvet cake': { price: '₹600 / 1kg', priceNum: 600, img: 'assets/images/red-velvet-cake.jpg', label: 'Red Velvet Cake' },
-    'custom theme cake': { price: '₹750 / 1kg', priceNum: 750, img: 'assets/images/custom-theme-cake.jpg', label: 'Custom Theme Cake' },
-    'photo cake': { price: '₹700 / 1kg', priceNum: 700, img: 'assets/images/photo-cake.jpg', label: 'Edible Photo Cake' },
-    'designer cake': { price: '₹850 / 1kg', priceNum: 850, img: 'assets/images/designer-cake.jpg', label: 'Luxury Designer Cake' },
-    'brownie tub': { price: '₹350 / tub', priceNum: 350, img: 'assets/images/brownie-tub.jpg', label: 'Fudgy Brownie Tub' },
-    'chocolate brownie': { price: '₹300 / pack', priceNum: 300, img: 'assets/images/chocolate-brownie.jpg', label: 'Chocolate Brownie Pack' },
-    'chocolate sauce brownie': { price: '₹380 / tub', priceNum: 380, img: 'assets/images/5.jpg', label: 'Hot Chocolate Sauce Brownie' },
-    'birthday custom cake': { price: '₹800 / 1kg', priceNum: 800, img: 'assets/images/1.jpg', label: 'Custom Birthday Cake' },
-    'anniversary cake': { price: '₹850 / 1kg', priceNum: 850, img: 'assets/images/3.jpg', label: 'Anniversary Special Cake' },
-    'baby shower cake': { price: '₹850 / 1kg', priceNum: 850, img: 'assets/images/2.jpg', label: 'Baby Shower Custom Cake' },
-    'wedding tier cake': { price: '₹1,200 / 1kg', priceNum: 1200, img: 'assets/images/6.jpg', label: 'Grand Wedding Tier Cake' },
-    'corporate event cake': { price: '₹950 / 1kg', priceNum: 950, img: 'assets/images/4.jpg', label: 'Corporate Event Cake' }
+    'jackfruit cake': { price: '₹650 / 1kg', priceNum: 650, img: 'jackfruit-cake.jpg', label: 'Signature Jackfruit Cake' },
+    'chocolate cake': { price: '₹550 / 1kg', priceNum: 550, img: '9.jpg', label: 'Rich Chocolate Cake' },
+    'birthday cake': { price: '₹500 / 1kg', priceNum: 500, img: 'hero-cake.jpg', label: 'Classic Birthday Cake' },
+    'vanilla cake': { price: '₹450 / 1kg', priceNum: 450, img: 'vanilla-cake.jpg', label: 'Vanilla Sponge Cake' },
+    'butterscotch cake': { price: '₹500 / 1kg', priceNum: 500, img: '10.jpg', label: 'Butterscotch Praline Cake' },
+    'black forest cake': { price: '₹550 / 1kg', priceNum: 550, img: 'black-forest-cake.jpg', label: 'Black Forest Cake' },
+    'red velvet cake': { price: '₹600 / 1kg', priceNum: 600, img: 'red-velvet-cake.jpg', label: 'Red Velvet Cake' },
+    'custom theme cake': { price: '₹750 / 1kg', priceNum: 750, img: 'designer-cake.jpg', label: 'Custom Theme Cake' },
+    'photo cake': { price: '₹700 / 1kg', priceNum: 700, img: 'photo-cake.jpg', label: 'Edible Photo Cake' },
+    'designer cake': { price: '₹850 / 1kg', priceNum: 850, img: 'designer-cake.jpg', label: 'Luxury Designer Cake' },
+    'brownie tub': { price: '₹350 / tub', priceNum: 350, img: '8.jpg', label: 'Fudgy Brownie Tub' },
+    'chocolate brownie': { price: '₹300 / pack', priceNum: 300, img: '7.jpg', label: 'Chocolate Brownie Pack' },
+    'chocolate sauce brownie': { price: '₹380 / tub', priceNum: 380, img: '5.jpg', label: 'Hot Chocolate Sauce Brownie' },
+    'birthday custom cake': { price: '₹800 / 1kg', priceNum: 800, img: 'hero-cake.jpg', label: 'Custom Birthday Cake' },
+    'anniversary cake': { price: '₹850 / 1kg', priceNum: 850, img: 'red-velvet-cake.jpg', label: 'Anniversary Special Cake' },
+    'baby shower cake': { price: '₹850 / 1kg', priceNum: 850, img: '2.jpg', label: 'Baby Shower Custom Cake' },
+    'wedding tier cake': { price: '₹1,200 / 1kg', priceNum: 1200, img: '6.jpg', label: 'Grand Wedding Tier Cake' },
+    'corporate event cake': { price: '₹950 / 1kg', priceNum: 950, img: 'black-forest-cake.jpg', label: 'Corporate Event Cake' }
 };
 
 // Delivery Option Toggle Handler for Order Modal
@@ -228,7 +228,7 @@ function handleOrderSubmit(event) {
     if (cartCount) cartCount.textContent = currentCartCount;
 
     // Get item price & picture URL
-    const itemData = cakeCatalogData[cakeSelect.toLowerCase()] || { price: '₹550 / kg', img: 'assets/images/hero-cake.jpg' };
+    const itemData = cakeCatalogData[cakeSelect.toLowerCase()] || { price: '₹550 / kg', img: 'hero-cake.jpg' };
     const photoLink = getPublicPhotoUrl(itemData.img);
 
     let deliveryDetailText = '';
@@ -362,7 +362,7 @@ function renderCartModal() {
 
     let html = '';
     cartItems.forEach((item, idx) => {
-        const itemInfo = cakeCatalogData[item.name.toLowerCase()] || { price: '₹500', priceNum: 500, img: 'assets/images/hero-cake.jpg' };
+        const itemInfo = cakeCatalogData[item.name.toLowerCase()] || { price: '₹500', priceNum: 500, img: 'hero-cake.jpg' };
         html += `
             <div class="cart-item-row">
                 <img src="${itemInfo.img}" alt="${item.name}" class="cart-thumb">
@@ -391,7 +391,7 @@ function checkoutCartWhatsApp() {
     }
 
     const itemsSummary = cartItems.map(item => {
-        const info = cakeCatalogData[item.name.toLowerCase()] || { price: '₹500 / 1kg', priceNum: 500, img: 'assets/images/hero-cake.jpg' };
+        const info = cakeCatalogData[item.name.toLowerCase()] || { price: '₹500 / 1kg', priceNum: 500, img: 'hero-cake.jpg' };
         const photoLink = getPublicPhotoUrl(info.img);
         return `• *${item.qty}x ${item.name}*%0A  ${photoLink}`;
     }).join('%0A%0A');
@@ -422,8 +422,12 @@ function checkoutCartWhatsApp() {
     }, 1000);
 }
 
-// Interactive Floating Rose, Chocolate & Cake Piece Particle System
+// Interactive Floating Rose, Chocolate & Cake Piece Particle System (Mobile Optimized)
 function initFloatingParticles() {
+    // Disable canvas animation on mobile phones to ensure 60fps smooth scrolling and prevent lag
+    const isMobile = window.innerWidth < 768 || ('ontouchstart' in window && window.innerWidth < 1024);
+    if (isMobile) return;
+
     const canvas = document.createElement('canvas');
     canvas.id = 'floatingParticles';
     canvas.style.position = 'fixed';
@@ -445,7 +449,7 @@ function initFloatingParticles() {
     });
 
     const particles = [];
-    const particleCount = 50;
+    const particleCount = 20; // Lightweight count for smooth desktop 60fps performance
     const colors = [
         'rgba(255, 77, 121, 0.75)',  // Rose Pink Particle
         'rgba(255, 130, 160, 0.65)', // Soft Rose Petal Dot
@@ -459,42 +463,47 @@ function initFloatingParticles() {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 3.5 + 1.2,
+            radius: Math.random() * 3 + 1,
             color: colors[Math.floor(Math.random() * colors.length)],
-            speedY: Math.random() * 0.7 + 0.2,
+            speedY: Math.random() * 0.5 + 0.2,
             speedX: Math.random() * 0.4 - 0.2,
             swing: Math.random() * Math.PI * 2,
-            swingSpeed: Math.random() * 0.02 + 0.005,
+            swingSpeed: Math.random() * 0.015 + 0.005,
             isSquare: Math.random() > 0.65
         });
     }
 
+    let isTabActive = true;
+    document.addEventListener('visibilitychange', () => {
+        isTabActive = !document.hidden;
+    });
+
     function animate() {
-        ctx.clearRect(0, 0, width, height);
+        if (isTabActive) {
+            ctx.clearRect(0, 0, width, height);
 
-        particles.forEach(p => {
-            p.y -= p.speedY;
-            p.swing += p.swingSpeed;
-            p.x += Math.sin(p.swing) * 0.5 + p.speedX;
+            particles.forEach(p => {
+                p.y -= p.speedY;
+                p.swing += p.swingSpeed;
+                p.x += Math.sin(p.swing) * 0.5 + p.speedX;
 
-            if (p.y < -12) {
-                p.y = height + 12;
-                p.x = Math.random() * width;
-            }
-            if (p.x < -12) p.x = width + 12;
-            if (p.x > width + 12) p.x = -12;
+                if (p.y < -12) {
+                    p.y = height + 12;
+                    p.x = Math.random() * width;
+                }
+                if (p.x < -12) p.x = width + 12;
+                if (p.x > width + 12) p.x = -12;
 
-            ctx.fillStyle = p.color;
-            ctx.beginPath();
-            if (p.isSquare) {
-                // Cake piece / crumb square dot
-                ctx.rect(p.x, p.y, p.radius * 1.8, p.radius * 1.8);
-            } else {
-                // Rose petal / chocolate round dot
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            }
-            ctx.fill();
-        });
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                if (p.isSquare) {
+                    ctx.rect(p.x, p.y, p.radius * 1.8, p.radius * 1.8);
+                } else {
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                }
+                ctx.fill();
+            });
+        }
 
         requestAnimationFrame(animate);
     }
