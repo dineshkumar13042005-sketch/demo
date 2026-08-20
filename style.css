@@ -1504,25 +1504,6 @@ img {
     .cta-title { font-size: 2rem; }
     .footer-grid { grid-template-columns: 1fr; }
     .delivery-options-grid { grid-template-columns: 1fr; }
-
-    /* Mobile Hardware Acceleration & Disable Heavy Blur Filters on Phones */
-    * {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-    }
-    .header {
-        background-color: rgba(16, 8, 5, 0.96) !important;
-    }
-    .hero-floating-card, .location-card, .product-card, .modal-card {
-        background: #23120B !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
-    }
-}
-
-/* Off-Screen Render Optimizations */
-.product-card, .menu-card {
-    content-visibility: auto;
-    contain-intrinsic-size: 380px;
 }
 
 /* ==========================================================================
