@@ -422,12 +422,8 @@ function checkoutCartWhatsApp() {
     }, 1000);
 }
 
-// Interactive Floating Rose, Chocolate & Cake Piece Particle System (Mobile Optimized)
+// Interactive Floating Rose, Chocolate & Cake Piece Particle System
 function initFloatingParticles() {
-    // Disable canvas animation on mobile phones to ensure 60fps smooth scrolling and prevent lag
-    const isMobile = window.innerWidth < 768 || ('ontouchstart' in window && window.innerWidth < 1024);
-    if (isMobile) return;
-
     const canvas = document.createElement('canvas');
     canvas.id = 'floatingParticles';
     canvas.style.position = 'fixed';
