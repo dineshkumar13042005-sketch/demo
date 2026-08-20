@@ -56,7 +56,7 @@ html {
 
 body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, rgba(22, 11, 7, 0.82) 0%, rgba(45, 17, 26, 0.78) 50%, rgba(18, 9, 5, 0.88) 100%), url('assets/images/hero-cake.jpg') center center / cover no-repeat fixed;
+    background: linear-gradient(135deg, rgba(22, 11, 7, 0.82) 0%, rgba(45, 17, 26, 0.78) 50%, rgba(18, 9, 5, 0.88) 100%), url('hero-cake.jpg') center center / cover no-repeat fixed;
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
@@ -401,7 +401,7 @@ img {
 .hero-section {
     position: relative;
     padding: 95px 0 60px;
-    background: linear-gradient(135deg, rgba(22, 11, 7, 0.84) 0%, rgba(45, 17, 26, 0.76) 50%, rgba(18, 9, 5, 0.88) 100%), url('assets/images/hero-cake.jpg') center center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(22, 11, 7, 0.84) 0%, rgba(45, 17, 26, 0.76) 50%, rgba(18, 9, 5, 0.88) 100%), url('hero-cake.jpg') center center/cover no-repeat;
     background-attachment: fixed;
     overflow: hidden;
 }
@@ -1504,6 +1504,25 @@ img {
     .cta-title { font-size: 2rem; }
     .footer-grid { grid-template-columns: 1fr; }
     .delivery-options-grid { grid-template-columns: 1fr; }
+
+    /* Mobile Hardware Acceleration & Disable Heavy Blur Filters on Phones */
+    * {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+    .header {
+        background-color: rgba(16, 8, 5, 0.96) !important;
+    }
+    .hero-floating-card, .location-card, .product-card, .modal-card {
+        background: #23120B !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+    }
+}
+
+/* Off-Screen Render Optimizations */
+.product-card, .menu-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 380px;
 }
 
 /* ==========================================================================
